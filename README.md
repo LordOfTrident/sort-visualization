@@ -13,7 +13,7 @@
 		<img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Temple-VM/sort-visualization?color=0088ff"/>
 	</a>
 	<br><br><br>
-	<img width="600px" src="res/clip.gif"/>
+	<img width="450px" src="res/clip.gif"/>
 </p>
 
 ## Table of contents
