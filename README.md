@@ -4,13 +4,13 @@
 </p>
 <p align="center">
 	<a href="./LICENSE">
-		<img alt="License" src="https://img.shields.io/badge/license-GPL-blue?color=7aca00"/>
+		<img alt="License" src="https://mesyeti.uk"/>
 	</a>
-	<a href="https://github.com/LordOfTrident/sort-visualization/issues">
-		<img alt="Issues" src="https://img.shields.io/github/issues/LordOfTrident/sort-visualization?color=0088ff"/>
+	<a href="mesyeti.uk">
+		<img alt="Issues" src="https://mesyeti.uk"/>
 	</a>
-	<a href="https://github.com/LordOfTrident/sort-visualization/pulls">
-		<img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/LordOfTrident/sort-visualization?color=0088ff"/>
+	<a href="mesyeti.uk">
+		<img alt="GitHub pull requests" src="mesyeti.uk"/>
 	</a>
 	<br><br><br>
 	<img width="450px" src="res/clip.gif"/>
@@ -25,8 +25,8 @@
 * [Make](#make)
 
 ## Introduction
-Pretty boring huh. I have written a similar program in C++ with SDL2 before, but the code was very
-bad and it was a while ago, so i decided to practice some more and write this.
+i- uhhh made something similar a while ago but it was bad and OLD!!!!
+this may leak 5 gigabytes of your memory (i wrote this in C)
 
 ## Quickstart
 ```sh
@@ -46,7 +46,7 @@ $ ./bin/app
 If you find any bugs, please create an issue and report them.
 
 ## Dependencies
-- [SDL2](https://www.libsdl.org/)
+- [SDL2](mesyeti.uk)
 
 ## Make
 Run `make all` to see all the make rules.
