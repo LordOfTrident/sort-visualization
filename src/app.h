@@ -27,7 +27,7 @@ typedef struct {
 	SDL_Event    event;
 	const Uint8 *key_states;
 
-	bool   quit, idle;
+	bool   quit, idle, sorted;
 	size_t i, j;
 
 	int list[SCREEN_W];

@@ -84,16 +84,23 @@ void app_shuffle_list(app_t *p_app) {
 
 		app_render(p_app);
 		app_events(p_app);
-		if (p_app->idle)
+		if (p_app->idle) {
+			p_app->idle = true;
+
 			return;
+		}
 
 		SDL_Delay(1000 / 120);
 	}
 
-	p_app->idle = true;
+	p_app->idle   = true;
+	p_app->sorted = false;
 }
 
 void app_bubblesort(app_t *p_app) {
+	if (p_app->sorted)
+		return;
+
 	p_app->idle = false;
 
 	bool sorted;
@@ -111,14 +118,18 @@ void app_bubblesort(app_t *p_app) {
 
 			app_render(p_app);
 			app_events(p_app);
-			if (p_app->idle)
+			if (p_app->idle) {
+				p_app->idle = true;
+
 				return;
+			}
 
 			SDL_Delay(1000 / BUBBLESORT_FPS);
 		}
 	} while (!sorted);
 
-	p_app->idle = true;
+	p_app->idle   = true;
+	p_app->sorted = true;
 }
 
 int app_quicksort_partition(app_t *p_app, int p_first, int p_last) {
@@ -160,11 +171,20 @@ void app_quicksort(app_t *p_app, int p_first, int p_last) {
 }
 
 void app_quicksort_start(app_t *p_app) {
+	if (p_app->sorted)
+		return;
+
 	p_app->idle = false;
 
 	app_quicksort(p_app, 0, SIZE_OF(p_app->list) - 1);
+	if (p_app->idle) {
+		p_app->idle = true;
 
-	p_app->idle = true;
+		return;
+	}
+
+	p_app->idle   = true;
+	p_app->sorted = true;
 }
 
 void app_run(app_t *p_app) {
